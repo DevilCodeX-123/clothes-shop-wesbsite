@@ -1,0 +1,205 @@
+.inventory-page {
+  padding: 30px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  color: var(--color-navy);
+  margin-bottom: 5px;
+}
+
+.page-header p {
+  color: var(--color-gray-400);
+  font-size: 0.9rem;
+}
+
+.add-btn {
+  background: var(--color-navy);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: var(--color-gold);
+}
+
+/* Controls */
+.inventory-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar svg {
+  position: absolute;
+  left: 15px;
+  color: var(--color-gray-400);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.ctrl-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  color: var(--color-gray-700);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  background: white;
+}
+
+/* Table */
+.inventory-table-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--color-gray-100);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.inventory-table th {
+  padding: 18px 25px;
+  background: #fcfcfc;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-gray-400);
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.inventory-table td {
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--color-gray-100);
+  font-size: 0.9rem;
+  color: var(--color-gray-700);
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.product-thumb {
+  width: 40px;
+  height: 40px;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+.sku {
+  background: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+}
+
+.status-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.status-pill.in-stock { background: #ECFDF5; color: #059669; }
+.status-pill.low-stock { background: #FFF7ED; color: #D97706; }
+.status-pill.out-of-stock { background: #FEF2F2; color: #DC2626; }
+
+.action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btns button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.action-btns .edit { color: #3B82F6; border: 1px solid #DBEAFE; }
+.action-btns .delete { color: #EF4444; border: 1px solid #FEE2E2; }
+
+/* Footer */
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.table-footer p {
+  color: var(--color-gray-400);
+  font-size: 0.85rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination button {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid var(--color-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.pagination button.active {
+  background: var(--color-navy);
+  color: white;
+  border-color: var(--color-navy);
+}

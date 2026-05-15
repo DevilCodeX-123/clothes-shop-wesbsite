@@ -1,0 +1,217 @@
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F0F2F5;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: var(--sidebar-width);
+  background-color: #FFFFFF;
+  border-right: 1px solid #E5E7EB;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  z-index: 100;
+}
+
+.sidebar-header {
+  padding: 30px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.sidebar-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  margin-bottom: 5px;
+}
+
+.sidebar-subtitle {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  color: var(--color-gray-600);
+  transition: var(--transition-fast);
+  gap: 15px;
+}
+
+.nav-item:hover {
+  background-color: #F9FAFB;
+  color: var(--color-navy);
+}
+
+.nav-item.active {
+  background-color: #EBF1FF;
+  color: #3B82F6;
+  border-right: 4px solid #3B82F6;
+}
+
+.item-icon {
+  font-size: 1.2rem;
+}
+
+.item-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h4 {
+  font-size: 0.9rem;
+  color: var(--color-navy);
+}
+
+.profile-info p {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+}
+
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-gray-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  background-color: #FFF1F2;
+  color: #E11D48;
+  border-color: #FECDD3;
+}
+
+/* Main Area */
+.admin-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  height: 70px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: #F3F4F6;
+  padding: 8px 15px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.search-icon {
+  color: var(--color-gray-400);
+  margin-right: 10px;
+}
+
+.header-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-btn {
+  color: var(--color-gray-500);
+  font-size: 1.2rem;
+}
+
+.admin-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #F9FAFB;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.admin-badge span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.admin-badge img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.admin-content {
+  padding: 40px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 992px) {
+  .admin-sidebar {
+    width: 80px;
+  }
+  
+  .sidebar-logo, .sidebar-subtitle, .item-label, .profile-info, .logout-btn span, .admin-badge span {
+    display: none;
+  }
+  
+  .admin-main {
+    margin-left: 80px;
+  }
+  
+  .header-search {
+    width: 200px;
+  }
+}

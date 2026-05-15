@@ -1,0 +1,17 @@
+{
+  "name": "velora-luxury-fashion",
+  "version": "1.0.0",
+  "description": "Velora Luxury Fashion E-Commerce Platform",
+  "main": "index.js",
+  "scripts": {
+    "frontend-install": "npm install --prefix frontend",
+    "backend-install": "npm install --prefix backend",
+    "install-all": "npm run frontend-install && npm run backend-install",
+    "dev": "npm run frontend-dev",
+    "frontend-dev": "npm run dev --prefix frontend",
+    "backend-dev": "npm run dev --prefix backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

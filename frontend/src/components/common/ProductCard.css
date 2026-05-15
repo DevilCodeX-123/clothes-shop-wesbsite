@@ -1,0 +1,176 @@
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition-medium);
+  border: 1px solid var(--color-gray-100);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badge.new-arrival { background: var(--color-navy); }
+.badge.trending { background: var(--color-gold); }
+
+/* Wishlist Overlay */
+.wishlist-overlay-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 2;
+  color: var(--color-gray-400);
+}
+
+.wishlist-overlay-btn:hover {
+  color: #EF4444;
+}
+
+/* Quick Actions Overlay */
+.product-quick-actions {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+.product-card:hover .product-quick-actions {
+  bottom: 0;
+}
+
+.quick-view-btn {
+  background: white;
+  color: var(--color-navy);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Details */
+.product-details {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-category {
+  font-size: 0.7rem;
+  color: var(--color-gray-400);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.product-name {
+  font-size: 1rem;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+  height: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.current-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: var(--color-gray-400);
+  text-decoration: line-through;
+}
+
+/* Add to Cart Button - Flipkart Style */
+.add-to-cart-bar {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-navy);
+  color: white;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  opacity: 0.9;
+}
+
+.add-to-cart-bar:hover {
+  opacity: 1;
+  background: var(--color-gold);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+  .product-quick-actions {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+.new-arrivals {
+  background-color: var(--color-off-white);
+}
+
+.section-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.view-all-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
